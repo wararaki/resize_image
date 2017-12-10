@@ -112,8 +112,9 @@ def main():
     '''
     main function
     '''
-    positive_file_path = "./base/positive"
-    negative_file_path = "./base/negative"
+    home_path = '/Users/wararaki/dataset/yahoohack'
+    positive_file_path = home_path+"/positive"
+    negative_file_path = home_path+"/negative"
 
     # load files
     positive_files = load_files(positive_file_path)
@@ -121,8 +122,8 @@ def main():
     logger.info("got filepath")
 
     # duplicate_files
-    duplicate_files(positive_file_path, positive_files, output_dir="./train/positives")
-    duplicate_files(negative_file_path, negative_files, output_dir="./train/negatives")
+    duplicate_files(positive_file_path, positive_files, output_dir=home_path+"/train/positives")
+    duplicate_files(negative_file_path, negative_files, output_dir=home_path+"/train/negatives")
     logger.info("Done")
 
     return 0
